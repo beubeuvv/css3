@@ -5,37 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css 속성(properties) - 배경 관련 속성</title>
     <style>
-    * { margin: 0; padding: 0; }    
-    html, body { width:100%; }
-    #canvas { width:100%; clear:both; }
-    .page { position:relative; width: 100vw; height: 100vh; 
-    box-sizing:border-box; clear:both; }
-    .page_tit { text-align: center; padding-top: 40px; }
-    #page1 { background-color:rgba(212, 110, 18, 0.75); }
-    #con { width:1280px; margin: 30px auto; }
+     *{margin: 0; padding: 0;}
+        html, body {width: 100%;}
+        #canvas{width: 100%;clear:both;}
+        .page{position: relative; width: 100vw; height: 100vh; box-sizing: border-box; clear :both;}
+        .page_tit{text-align: center; padding-top: 40px;}
+        #page1 {background-color:rgba(212,110,18,0.75);}
 
-    #page2 { background-image: url("./sakura.png"), url("./bg1.jpg"); 
-    background-repeat: no-repeat; 
-    background-size:300px auto, cover; 
-    background-position:center bottom, center center; 
-    background-attachment: fixed, scroll; }
+        #page2{background-image: url("./img/kazuha.png"), url("./img/bada.jpg");
+         background-repeat: no-repeat; 
+         background-size:300px auto, cover; 
+         background-position: center bottom, center center;
+         background-attachment: fixed, scroll;}
 
-    #page3 .pic { clear:both; width:900px; height:600px; 
-    margin:20px auto; border:30px solid rgba(0,0,0,0.35); 
-    padding:100px; font-size:100px; line-height: 600px; 
-    text-align: center; 
-    background-image: url("./bg1.jpg"); 
-    background-size:80% auto; background-repeat:repeat-x; 
-    background-position: 0 0; background-origin:border-box;
-    background-clip: content-box; 
-    /* background-clip : 배경이미지가 적용되는 범위 */
-    /* background-origin : 배경이미지가 어디 부터 시작할지 */
-    }
+        #page3 .pic {clear: both; width: 600px; height:400px; margin : 20px auto; border:30px solid rgba(0,0,0,0.35);
+        padding:100px; font-size: 100px; line-height: 600px; text-align: center;
+        background-image: url("./img/bada.jpg");background-size: 100% auto; background-repeat: repeat-x; background-position: 0 0; 
+        background-origin: border-box; background-clip: content-box;}
+        /*background-clip : 배경이미지가 적용되는 범위 */
+        /*background-origin : 배경이미지가 어디부터 시작할지 */
 
-    #page4 { background:#ff0 url("./bg1.jpg") center center/100% auto no-repeat fixed; }
+        #page4 {background: #ff0 url("./img/bada.jpg") center center/100% auto no-repeat fixed;}
+
+        .page {overflow:hidden;}
+        .page .vs { width:100%; height:auto;max-height:100%;}
+        .vs img {display:block; width :100%;height:auto;}
+
+        #page5 .vs img {filter:blur(10px);}
+        #page6 .vs img {filter:brightness(100%);}
+        #page7 .vs img {
+        /* filter:contrast(50%); */
+        /*filter:grayscale(90%); */
+        /*filter:invert(90%); */
+        /*filter:hue-rotate(90deg); */
+        /*filter:saturate(20%); */
+        filter:sepia(60%);}
     </style>
 </head>
 <body>
+    <!--div#canvas>section.page#page$*8>h2.page_tit{페이지제목$}-->
     <div id="canvas">
         <section class="page" id="page1">
             <h2 class="page_tit">페이지제목1</h2>
@@ -44,11 +52,27 @@
             <h2 class="page_tit">페이지제목2</h2>
         </section>
         <section class="page" id="page3">
-            <h2 class="page_tit">페이지제목3</h2>
+            <h2 class="pic_tit">페이지제목3</h2>
             <div class="pic">그림</div>
         </section>
         <section class="page" id="page4">
             <h2 class="page_tit">페이지제목4</h2>
+        </section>
+        <section class="page" id="page5">
+            <h2 class="page_tit">페이지제목5</h2>
+            <figure class="vs" src="./img/bada.jpg" alt="바다1"></figure>
+        </section>
+        <section class="page" id="page6">
+            <h2 class="page_tit">페이지제목6</h2>
+            <figure class="vs" src="./img/bada.jpg" alt="바다1"></figure>
+        </section>
+        <section class="page" id="page7">
+            <h2 class="page_tit">페이지제목7</h2>
+            <figure class="vs" src="./img/bada.jpg" alt="바다1"></figure>
+        </section>
+        <section class="page" id="page8">
+            <h2 class="page_tit">페이지제목48</h2>
+            <figure class="vs" src="./img/bada.jpg" alt="바다1"></figure>
         </section>
     </div>
     <div id="con">
